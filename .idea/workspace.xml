@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3eaad958-4c9d-47bd-8316-75f2f80c95a2" name="Changes" comment="" />
+    <list default="true" id="3eaad958-4c9d-47bd-8316-75f2f80c95a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_06_04_202955_add_unique_index_to_fias_code_to_houses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/GoogleSheet/GoogleSheetService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GoogleSheet/GoogleSheetService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/House/HouseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/House/HouseService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/credentials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/#ib_16384_0.dblwr" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/#ib_16384_0.dblwr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/binlog.000004" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/binlog.000004" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/ib_logfile1" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/ib_logfile1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/cold_water_supplies.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/cold_water_supplies.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/electricities.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/electricities.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/failed_jobs.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/failed_jobs.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/gases.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/gases.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/hot_water_supplies.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/hot_water_supplies.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/house_types.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/house_types.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/houses.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/houses.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/microdistricts.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/microdistricts.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/migrations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/migrations.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/outbuildings.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/outbuildings.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/overlaps.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/overlaps.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/password_resets.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/password_resets.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/personal_access_tokens.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/personal_access_tokens.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/sewerages.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/sewerages.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/streets.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/streets.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/users.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/wall_types.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/wall_types.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/laravel/warms.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/laravel/warms.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/mysql_testing/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/storage/mysql_testing/undo_002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ApiCorrectWorkTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ApiCorrectWorkTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +47,9 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -148,6 +186,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="29zCSWlEk4WYaUKGR9Z5E4i9WTp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -173,27 +212,24 @@
       <recent name="$PROJECT_DIR$/tests/Database/Factories/Sewerage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage" />
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/tests/Database/Factories" />
       <recent name="$PROJECT_DIR$/tests/Unit/Microdistrict" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GoogleSheetServiceTest.test_function_parse_data_correctly_works">
+  <component name="RunManager" selected="PHPUnit.ApiCorrectWorkTest">
+    <configuration name="ApiCorrectWorkTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ApiCorrectWorkTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ApiCorrectWorkTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner configuration_file="/app/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
     </configuration>
     <configuration name="GoogleSheetServiceTest.test_function_parse_data_correctly_works" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\GoogleSheetServiceTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/GoogleSheetServiceTest.php" method="test_function_parse_data_correctly_works" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RelationsCorrectlyEstablishedTest.test_guest_cant_get_house_via_api" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RelationsCorrectlyEstablishedTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RelationsCorrectlyEstablishedTest.php" method="test_guest_cant_get_house_via_api" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RelationsCorrectlyEstablishedTest.test_relations_correctly_established" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RelationsCorrectlyEstablishedTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RelationsCorrectlyEstablishedTest.php" method="test_relations_correctly_established" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RelationsCorrectlyEstablishedTest.test_user_can_get_house_via_api" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -204,21 +240,25 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/app/phpunit.xml" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_relations_correctly_established" />
-      <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_guest_cant_get_house_via_api" />
       <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_user_can_get_house_via_api" />
       <item itemvalue="PHPUnit.Feature" />
       <item itemvalue="PHPUnit.GoogleSheetServiceTest.test_function_parse_data_correctly_works" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.ApiCorrectWorkTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ApiCorrectWorkTest" />
+        <item itemvalue="PHPUnit.tests" />
         <item itemvalue="PHPUnit.GoogleSheetServiceTest.test_function_parse_data_correctly_works" />
         <item itemvalue="PHPUnit.Feature" />
         <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_user_can_get_house_via_api" />
-        <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_guest_cant_get_house_via_api" />
-        <item itemvalue="PHPUnit.RelationsCorrectlyEstablishedTest.test_relations_correctly_established" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +278,7 @@
       <workItem from="1654182441299" duration="10000" />
       <workItem from="1654182458636" duration="197000" />
       <workItem from="1654182657557" duration="3077000" />
-      <workItem from="1654330800555" duration="17614000" />
+      <workItem from="1654330800555" duration="23840000" />
     </task>
     <servers />
   </component>

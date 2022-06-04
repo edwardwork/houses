@@ -36,7 +36,7 @@ class GoogleSheetService
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setRedirectUri('http://localhost:8000');
         $client->setScopes(Sheets::SPREADSHEETS);
-        $client->setAuthConfig(public_path('credentials.json'));
+        $client->setAuthConfig(storage_path('credentials.json'));
         $client->setAccessType('offline');
 
         return $client;

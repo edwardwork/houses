@@ -70,6 +70,8 @@ class HouseService
                 ->firstOrCreate(
                     [
                         'fias_code' => $fiasCode,
+                    ],
+                    [
                         'microdistrict_id' => $microdistrict->id,
                         'zone' => $datum->getZone(),
                         'street_id' => $street->id,

@@ -20,7 +20,7 @@ use Tests\TestCase;
 
 class ApiCorrectWorkTest extends TestCase
 {
-    public function test_guest_cant_get_house_via_api(): void
+    public function test_guest_can_get_house_via_api(): void
     {
         $microdistrict = Microdistrict::factory()->create();
         $street = Street::factory()->create();
@@ -56,7 +56,18 @@ class ApiCorrectWorkTest extends TestCase
             );
 
         $this->get('api/house/' . $fiasCode, ['accept' => 'application/json'])
-            ->assertUnauthorized();
+            ->assertJsonStructure(
+                [
+                    'data' => [
+                        'year',
+                        'floor',
+                        'house_type',
+                        'wall_type',
+                        'full_address',
+                    ]
+                ]
+            )
+            ->assertOk();
     }
 
     public function test_user_can_get_house_via_api(): void
