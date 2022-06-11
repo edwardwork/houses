@@ -15,6 +15,8 @@ return [
 
     'default' => env('FILESYSTEM_DISK', 'local'),
 
+    'house' => env('FILESYSTEM_DISK_HOUSE', 'media'),
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks
@@ -54,6 +56,12 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+        ],
+
+        'media' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/media'),
+            'url' => env('APP_URL') . '/storage/media',
         ],
 
     ],

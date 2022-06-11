@@ -2,6 +2,7 @@
 
 namespace App\Models\House;
 
+use App\Enums\House\HouseEnum;
 use App\Models\ColdWaterSupply\ColdWaterSupply;
 use App\Models\Electricity\Electricity;
 use App\Models\Gas\Gas;
@@ -19,6 +20,12 @@ use Database\Factories\House\HouseFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use League\Glide\Filesystem\FileNotFoundException;
+use Spatie\Image\Exceptions\InvalidManipulation;
+use Spatie\Image\Manipulations;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
  * @property int id
@@ -59,9 +66,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * @method static HouseFactory factory(...$parameters)
  */
-class House extends Model
+class House extends Model implements HasMedia
 {
     use HasFactory;
+    use InteractsWithMedia;
 
     public const TABLE = 'houses';
 
@@ -87,6 +95,61 @@ class House extends Model
         'warm_id',
         'house_type_id',
     ];
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection(HouseEnum::FACADES)
+            ->useDisk(config('filesystems.house'));
+
+        $this->addMediaCollection(HouseEnum::TERRITORY)
+            ->useDisk(config('filesystems.house'));
+
+        $this->addMediaCollection(HouseEnum::ENTRANCE)
+            ->useDisk(config('filesystems.house'));
+
+        $this->addMediaCollection(HouseEnum::ENTRANCE_ENTER)
+            ->useDisk(config('filesystems.house'));
+    }
+
+    /**
+     * @throws InvalidManipulation
+     * @throws FileNotFoundException
+     */
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion(HouseEnum::SMALL_CONVERSATION)
+            ->width(349)
+            ->height(262)
+            ->sharpen(10)
+            ->watermark(public_path('watermark.png'))
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+            ->watermarkFit(Manipulations::FIT_CONTAIN)
+            ->watermarkWidth(100, Manipulations::UNIT_PERCENT)
+            ->nonOptimized()
+            ->nonQueued();
+
+        $this->addMediaConversion(HouseEnum::MEDIUM_CONVERSATION)
+            ->width(749)
+            ->height(562)
+            ->sharpen(10)
+            ->watermark(public_path('watermark.png'))
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+            ->watermarkFit(Manipulations::FIT_CONTAIN)
+            ->watermarkWidth(100, Manipulations::UNIT_PERCENT)
+            ->nonOptimized()
+            ->nonQueued();
+
+        $this->addMediaConversion(HouseEnum::LARGE_CONVERSATION)
+            ->width(1920)
+            ->height(1440)
+            ->sharpen(10)
+            ->watermark(public_path('watermark.png'))
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+            ->watermarkFit(Manipulations::FIT_CONTAIN)
+            ->watermarkWidth(100, Manipulations::UNIT_PERCENT)
+            ->nonOptimized()
+            ->nonQueued();
+    }
 
     public function microdistrict(): BelongsTo|Microdistrict
     {
