@@ -10,10 +10,10 @@ use App\Nova\Filters\Electricity\ElectricityTypesFilter;
 use App\Nova\Filters\Gas\GasTypesFilter;
 use App\Nova\Filters\HotWaterSupply\HotWaterSupplyTypesFilter;
 use App\Nova\Filters\HouseType\HouseTypeTypesFilter;
+use App\Nova\Filters\Overlap\OverlapTypesFilter;
 use App\Nova\Filters\Sewerage\SewerageTypesFilter;
 use App\Nova\Filters\Warm\WarmTypesFilter;
-use App\Nova\Filters\Year\FromYearFilter;
-use App\Nova\Filters\Year\ToYearFilter;
+use App\Nova\Filters\Year\YearRangeFilter;
 use App\Nova\Gas\Gas;
 use App\Nova\Resource;
 use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
@@ -61,6 +61,7 @@ class House extends Resource
      */
     public static $search = [
         'id',
+        'address',
     ];
 
     /**
@@ -77,7 +78,7 @@ class House extends Resource
                 ->sortable(),
 
             Text::make('Address', function () {
-                return $this->getFullAddress();
+                return $this->address;
             })->onlyOnIndex(),
 
             Medialibrary::make('Facades', HouseEnum::FACADES, config('filesystems.house'))
@@ -205,8 +206,8 @@ class House extends Resource
     public function filters(Request $request)
     {
         return [
-            new FromYearFilter(),
-            new ToYearFilter(),
+            new YearRangeFilter(),
+            new OverlapTypesFilter(),
             new HouseTypeTypesFilter(),
             new HotWaterSupplyTypesFilter(),
             new ColdWaterSupplyTypesFilter(),

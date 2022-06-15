@@ -22,7 +22,7 @@ class HouseResource extends JsonResource
             'floor' => $this->floor,
             'house_type' => $this->houseType?->title,
             'wall_type' => $this->wallType?->title,
-            'full_address' => $this->getFullAddress(),
+            'full_address' => $this->address,
         ];
     }
 }

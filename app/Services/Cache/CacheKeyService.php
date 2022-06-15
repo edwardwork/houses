@@ -31,6 +31,11 @@ class CacheKeyService
         return 'sewerage_' . static::FILTER_VALUES_SUFFIX;
     }
 
+    public static function getCacheKeyForOverlapFilterValues(): string
+    {
+        return 'overlap_' . static::FILTER_VALUES_SUFFIX;
+    }
+
     public static function getCacheKeyForGasFilterValues(): string
     {
         return 'gas_' . static::FILTER_VALUES_SUFFIX;

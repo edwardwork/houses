@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Enums\Roles\RoleType;
 use App\Models\ColdWaterSupply\ColdWaterSupply;
 use App\Models\Electricity\Electricity;
 use App\Models\Gas\Gas;
@@ -30,6 +31,7 @@ use App\Policies\Street\StreetPolicy;
 use App\Policies\WallType\WallTypePolicy;
 use App\Policies\Warm\WarmPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class AuthServiceProvider extends ServiceProvider
@@ -65,6 +67,11 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        //
+
+        Gate::before(static function ($user, $ability) {
+            if ($user->hasRole(RoleType::SUPER_ADMIN)) {
+                return true;
+            }
+        });
     }
 }

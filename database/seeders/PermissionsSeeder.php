@@ -39,24 +39,4 @@ class PermissionsSeeder extends Seeder
             $role->syncPermissions($permissions);
         }
     }
-
-    /**
-     * @throws ReflectionException
-     */
-    private function seedRolePermissions(Role $role, array $modelPermissions): void
-    {
-        foreach ($modelPermissions as $model => $perms) {
-            $permissions = collect($perms)->crossJoin([ModelPolicy::getClassPostfix($model)])
-                ->map(
-                    function ($item) {
-                        $perm = implode('-', $item); // view-deal
-                        Permission::findOrCreate($perm, 'web');
-
-                        return $perm;
-                    }
-                )->toArray();
-
-            $role->givePermissionTo($permissions);
-        }
-    }
 }

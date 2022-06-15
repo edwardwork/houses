@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "digital-creative/nova-range-input-filter": "^0.1.5",
         "dmitrybubyakin/nova-medialibrary-field": "^3.3",
         "doctrine/dbal": "^3.3",
         "google/apiclient": "^2.0",

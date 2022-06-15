@@ -64,6 +64,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property Carbon created_at
  * @property Carbon updated_at
  *
+ * @property string address
+ *
  * @method static HouseFactory factory(...$parameters)
  */
 class House extends Model implements HasMedia
@@ -211,12 +213,23 @@ class House extends Model implements HasMedia
         return $this->belongsTo(HouseType::class);
     }
 
-    public function getFullAddress(): string
+    public function makeFullAddress(): string
     {
         $microdistrict = $this->microdistrict?->title;
         $streetName = $this->street?->title;
         $number = $this->number;
 
         return "микрорайон $microdistrict, улица $streetName, дом $number";
+    }
+
+    protected static function booted()
+    {
+        static::creating(static function (House $house) {
+            $house->address = $house->makeFullAddress();
+        });
+
+        static::updating(static function (House $house) {
+            $house->address = $house->makeFullAddress();
+        });
     }
 }

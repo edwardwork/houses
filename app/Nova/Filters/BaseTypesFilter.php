@@ -21,11 +21,13 @@ abstract class BaseTypesFilter extends BooleanFilter
     {
         $data = $this->loadInformationAboutModel();
 
-        foreach ($data as $datum) {
-            if ($value[$datum->id]) {
-                $query->orWhere($this->getRelationKey(), $datum->id);
+        $query->where(function (Builder $builder) use ($data, $query, $value) {
+            foreach ($data as $datum) {
+                if ($value[$datum->id]) {
+                    $builder->orWhere($this->getRelationKey(), $datum->id);
+                }
             }
-        }
+        });
 
         return $query;
     }
