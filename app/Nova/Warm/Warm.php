@@ -18,12 +18,21 @@ class Warm extends Resource
      */
     public static $model = \App\Models\Warm\Warm::class;
 
+    public static function label()
+    {
+        return __('Warm');
+    }
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
     public static $title = 'title';
+
+    public static $group = 'Настройки';
+
+    public static $showColumnBorders = true;
 
     /**
      * The columns that should be searched.

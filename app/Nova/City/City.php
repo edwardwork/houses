@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Nova\Sewerage;
+namespace App\Nova\City;
 
 use App\Nova\Resource;
 use Illuminate\Http\Request;
@@ -9,18 +9,18 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Sewerage extends Resource
+class City extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Sewerage\Sewerage::class;
+    public static $model = \App\Models\City\City::class;
 
     public static function label()
     {
-        return __('Overlap');
+        return __('City');
     }
 
     /**

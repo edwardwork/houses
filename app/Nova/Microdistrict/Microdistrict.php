@@ -18,12 +18,21 @@ class Microdistrict extends Resource
      */
     public static $model = \App\Models\Microdistrict\Microdistrict::class;
 
+    public static function label()
+    {
+        return __('Microdistrict');
+    }
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
     public static $title = 'title';
+
+    public static $group = 'Настройки';
+
+    public static $showColumnBorders = true;
 
     /**
      * The columns that should be searched.

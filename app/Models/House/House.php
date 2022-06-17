@@ -3,6 +3,7 @@
 namespace App\Models\House;
 
 use App\Enums\House\HouseEnum;
+use App\Models\City\City;
 use App\Models\ColdWaterSupply\ColdWaterSupply;
 use App\Models\Electricity\Electricity;
 use App\Models\Gas\Gas;
@@ -20,6 +21,7 @@ use Database\Factories\House\HouseFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Str;
 use League\Glide\Filesystem\FileNotFoundException;
 use Spatie\Image\Exceptions\InvalidManipulation;
 use Spatie\Image\Manipulations;
@@ -213,10 +215,15 @@ class House extends Model implements HasMedia
         return $this->belongsTo(HouseType::class);
     }
 
+    public function city(): BelongsTo|City
+    {
+        return $this->belongsTo(City::class);
+    }
+
     public function makeFullAddress(): string
     {
-        $microdistrict = $this->microdistrict?->title;
-        $streetName = $this->street?->title;
+        $microdistrict = Str::ucfirst($this->microdistrict?->title);
+        $streetName = Str::ucfirst($this->street?->title);
         $number = $this->number;
 
         return "микрорайон $microdistrict, улица $streetName, дом $number";

@@ -18,12 +18,21 @@ class HotWaterSupply extends Resource
      */
     public static $model = \App\Models\HotWaterSupply\HotWaterSupply::class;
 
+    public static function label()
+    {
+        return __('Hot water supply');
+    }
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
     public static $title = 'title';
+
+    public static $group = 'Настройки';
+
+    public static $showColumnBorders = true;
 
     /**
      * The columns that should be searched.
