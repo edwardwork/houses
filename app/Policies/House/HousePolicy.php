@@ -10,7 +10,12 @@ class HousePolicy
 {
     use HandlesAuthorization;
 
-    protected array $roles = [RoleType::SUPER_ADMIN, RoleType::FIRST_TYPE_ROLE, RoleType::SECOND_TYPE_ROLE];
+    protected array $roles = [
+        RoleType::SUPER_ADMIN,
+        RoleType::FIRST_TYPE_ROLE,
+        RoleType::SECOND_TYPE_ROLE,
+        RoleType::THIRD_TYPE_ROLE,
+    ];
 
     public function viewAny(User $user): bool
     {
