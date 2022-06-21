@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class ElectricityTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Electricity');
+    }
+
     function getModelName(): string
     {
         return Electricity::class;

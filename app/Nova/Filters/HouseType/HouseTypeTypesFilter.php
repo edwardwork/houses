@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class HouseTypeTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('House type');
+    }
+
     function getModelName(): string
     {
         return HouseType::class;

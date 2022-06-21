@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Log;
 
 class YearRangeFilter extends RangeInputFilter
 {
+    public function name()
+    {
+        return __('Year');
+    }
+
     /**
      * Apply the filter to the given query.
      *

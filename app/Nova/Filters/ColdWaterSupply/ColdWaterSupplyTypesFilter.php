@@ -9,6 +9,11 @@ use App\Services\Cache\CacheKeyService;
 
 class ColdWaterSupplyTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Cold water supply');
+    }
+
     function getModelName(): string
     {
         return ColdWaterSupply::class;

@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class SewerageTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Sewerage');
+    }
+
     function getModelName(): string
     {
         return Sewerage::class;

@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class OverlapTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Overlap');
+    }
+
     function getModelName(): string
     {
         return Overlap::class;

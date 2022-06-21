@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class WarmTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Warm');
+    }
+
     function getModelName(): string
     {
         return Warm::class;

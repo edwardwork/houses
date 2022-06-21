@@ -20,7 +20,7 @@ class Sewerage extends Resource
 
     public static function label()
     {
-        return __('Overlap');
+        return __('Sewerage');
     }
 
     /**

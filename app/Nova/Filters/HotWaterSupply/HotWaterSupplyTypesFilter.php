@@ -8,6 +8,11 @@ use App\Services\Cache\CacheKeyService;
 
 class HotWaterSupplyTypesFilter extends BaseTypesFilter
 {
+    public function name()
+    {
+        return __('Hot water supply');
+    }
+
     function getModelName(): string
     {
         return HotWaterSupply::class;
