@@ -52,7 +52,7 @@ class House extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'address';
 
     public static $group = 'Главное';
 

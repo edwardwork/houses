@@ -17,6 +17,14 @@ return [
 
     'house' => env('FILESYSTEM_DISK_HOUSE', 'media'),
 
+    'logo' => env('FILESYSTEM_DISK_LOGO', 'media'),
+
+    'residential_complex' => env('FILESYSTEM_DISK_RESIDENTIAL_COMPLEX', 'media'),
+
+    'residential_house' => env('FILESYSTEM_DISK_RESIDENTIAL_HOUSE', 'media'),
+
+    'apartment' => env('FILESYSTEM_DISK_APARTMENT', 'media'),
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks
